@@ -1,0 +1,480 @@
+body{
+    overflow:hidden !important;
+}
+div.content div.body section.page.middle{
+    justify-content: center !important;
+}
+div.content div.body header.head{
+    position: relative;
+    padding-top: 30px;
+    background-color: #6D8BA8;
+    margin: 0px;
+    color: #F6F6F6;
+    text-align: center;
+    overflow: hidden;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex: 1 1 30vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+div.content div.body header.head div.tag{    
+    text-align: left;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.43);
+    width: 100%;
+    padding: 5px 10px;
+    z-index: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 15px 0px 0px;
+}
+div.content div.body header.head div.tag div.options{
+    flex: 3 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px;
+    flex-flow: row wrap;
+    margin: 3px 8px;
+}
+div.content div.body header.head div.tag:hover{
+    background-color: rgba(0, 0, 0, 0.69);
+}
+/*Tags Align*/
+div.content div.body header.head div.tag.bottom{
+    bottom:0%;
+}
+div.content div.body header.head div.tag.top{
+    top:0%;
+}
+div.content div.body header.head div.tag div.info{
+    margin: 5px;
+    flex: 2 1 40%;
+    overflow: hidden;
+}
+div.content div.body header.head div.tag div.info a.title{
+    text-align: left;
+    color: rgb(233, 233, 233);
+    font-size: 1.75em;
+    text-shadow: 1px 1px 1px rgba(158, 157, 157, 0.3);
+    line-height: 2.35em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+div.content div.body header.head div.tag div.info div.description[contenteditable]{
+    min-height: 1.35em;
+    cursor:pointer;
+}
+div.content div.body header.head div.tag div.info div.description[contenteditable]:focus{
+    min-height: 1.35em;
+    cursor:pointer;
+    overflow: auto !important;
+}
+div.content div.body header.head div.tag div.info div.description{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 91%;
+    font-size: 0.75em;
+    color: #B9B9B9;
+    font-weight: bold;
+    line-height: 1.35em;    
+}
+div.content div.body header.head div.tag div.profile:not(.icon){
+   margin: 0px;
+   flex: 0 0 auto;
+}
+div.content div.body header.head div.profile:not(.icon){    
+    z-index: 1;
+    align-self: center;
+}
+.opacity{
+    opacity: 0;
+}
+div.content div.body section.group,div.content div.body section.content{
+    flex: 1 1 60vh;
+}
+div.content div.body section.group div.chat-container{    
+    border-bottom: 1px solid #E4E4E4;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    min-height: 3vh;
+    flex: 2 1 auto;
+}
+div.content div.body section.group div.chat-container div.cloud-item div.top div.icon.check{
+    flex: 0 0 auto;
+}
+.icon.delete{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+div.content div.body section.group div.chat-container div.cloud-item div.message img{
+    max-width: 250px;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+div.content div.body section.group div.chat-container div.cloud-item div.message div.galery{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+div.content div.body section.group div.chat-container div.cloud-item div.message div.galery div.items{
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+div.float.bottom{
+    position:absolute;
+    bottom: 0%;
+    left:0%;
+    width: 100%;
+}
+div.float.top-end{
+    position:absolute;
+    top: 0%;
+    right:0%;
+}
+div.content div.body section.group div.chat-container div.cloud-item div.message div.galery div.items img{
+    width: 68px;
+    height: 68px; 
+}
+div.cloud-item.selected{
+    box-shadow: 1px 1px 8px rgba(239, 180, 60, 0.9);
+    border: 1px solid #F0CB80;
+}
+div.content div.body section.group div.chat-container div.cloud-item{
+   /* flex: 0 0 auto;*/
+    max-width: 250px;    
+    border-radius: 0.35em;
+    padding: 5px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    align-self: flex-end;
+    position: relative;
+}
+div.content div.body section.group div.chat-container div.cloud-item,div.item, a.profile{
+    transition: opacity 500ms ease-out 0s, background-color 500ms linear 0s;
+}
+div.content div.body section.group div.chat-container div.cloud-item.I{
+    background-color: #8ABDD7 !important;
+    margin-left: 10px;
+    align-self: flex-start;
+}
+div.content div.body section.group div.chat-container div.cloud-item.I:before{
+    content: "";
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #8ABDD7 transparent transparent;
+    left: -15px;
+    top: 45%;
+    position: absolute;
+}
+div.content div.body section.group div.chat-container div.cloud-item:nth-child(2n){
+    background-color: #B0E1DC;
+}
+div.content div.body section.group div.chat-container div.cloud-item:nth-child(2n):not(.I):after{
+    content: "";
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #B0E1DC transparent transparent;
+    left: 99%;
+    top: 41%;
+    position: absolute;   
+    transform: rotate(180deg);
+}
+div.content div.body section.group div.chat-container div.cloud-item:nth-child(2n+1){
+    background-color: #F8D96E;
+}
+div.content div.body section.group div.chat-container div.cloud-item:nth-child(2n+1):not(.I):after{
+    content: "";
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #F8D96E transparent transparent;
+    left: 99%;
+    top: 41%;
+    position: absolute;    
+    transform: rotate(180deg);
+}
+div.content div.body section.group div.chat-container div.cloud-item div.top div.container{
+    flex: 1 0 auto;
+}
+div.content div.body section.group div.chat-container div.cloud-item div.top{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+div.content div.body section.group div.chat-sidebar{
+    flex: 0 0 auto;
+    background-color: #C8C8C8;
+    padding: 5px 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+div.emoticons-box{
+    overflow:auto;
+    max-height: 12vh;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    align-items:center;
+    padding:5px;
+}
+div.content div.body section.group div.chat-sidebar div.control{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+button.emoticon{
+    width: 35px;
+    height: 35px;
+    border-radius: 0.35em;
+    border: none;
+    background-color: #A5A5A5;
+    margin: 5px;
+}
+div.content div.body section.group div.chat-sidebar div.message-write{
+    align-self: stretch;
+    min-width: 20%;
+    flex: 3 0 auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.35em;
+    margin: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.39) inset;    
+    padding: 10px 15px;
+    overflow: hidden;
+    max-height: 9vh;
+    position: relative;
+}
+div.content div.body section.group div.chat-sidebar div.message-write div[contenteditable]{
+   	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -14%;
+	left: 0%;
+	overflow: auto;
+	outline: medium none;
+	color: #595959;
+	padding: 10px;
+}
+div.content div.body section.group div.chat-sidebar .icon{
+    width: 42px !important;
+    height: 42px !important;    
+}
+.difusion{
+    background-color: #5C927B;   
+}
+.difusion:hover{
+    background-color: #459573;
+}
+.icon.send, .emoticon.play, .emoticon.movie{
+    background-color: #6F94AB;
+}
+.icon.send:hover, .emoticon.play:hover, .emoticon.movie:hover{
+    background-color: #5B8CAB;
+}
+div.content div.body section.group div.chat-sidebar .icon.emoticon{
+    background-color: #2B90E6;   
+}
+div.content div.body section.group div.chat-sidebar div.icon.emoticon{
+  flex: 1 1 auto;
+}
+div.content div.body section.content h2,div.content div.body section.content h1,div.content div.body section.content h3,div.content div.body section.content h4{
+    color: rgb(81, 81, 81);
+    border-bottom: 1px solid #E4E4E4;
+    line-height: 2.35em;
+    margin: 10px 5px;
+}
+
+div.content div.body  div.menu-top{
+    display: block;
+    overflow-y: hidden;
+    overflow-x:auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #E4E4E4;
+    background-color: #F8F8F8;
+    flex: 1 0 auto;
+}
+div.content div.body section.content div.item div.container{
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+div.content div.body  div.menu-top ul{
+    display: flex;
+    flex-flow: row nowrap;
+}
+div.content div.body  div.menu-top ul li{
+    display: inline-block;
+    flex: 1 1 auto;
+    margin: 5px;
+}
+img.mime{
+    width: 36px;
+    height: 36px;
+    margin: 5px;
+    border-radius: 0.25em;
+    background-color: #DDD;
+}
+div.content div.body  div.menu-top ul li a{
+    background-color: rgb(227, 227, 227);
+    padding: 15px;
+    border-radius: 0.35em;
+    border: 1px solid rgb(233, 233, 233);
+    color: #636363;
+    transition: all 0.25s ease 0s;
+}
+div.content div.body  div.menu-top ul li a:hover,div.content div.body div.menu-top ul li a:active,div.content div.body div.menu-top ul li a.current{
+    background-color: #DDD;
+}
+div.progressbar{
+    position: relative;
+    width: 100%;
+    height: 0.59em;
+    background-color: #8A8A8A;
+    overflow: hidden;
+    flex: 1 0 auto;
+}
+div.progressbar div.progress{
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #4AC3CC;
+    transition: all 0.5s linear 0s;
+}
+div.toolbox{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    flex: 0 0 auto;
+    transition: all 0.5s cubic-bezier(0.65,0.05,0.36,1) 0s;
+}
+div.MediaResource{
+    margin: 0px;
+    padding: 0px;
+    transition: transform 0.5s linear 0s;
+}
+div.MediaResource canvas#media, #maps{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+div.MediaResource canvas#media {    
+    background-color: #000;
+}
+div.MediaResource div.container{
+     display: flex;
+    flex-flow:column nowrap;
+    justify-content:space-between;
+    align-items:center;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+}
+div.MediaResource div.top{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-end;
+}
+div.MediaResource div.panelMain{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+button.mediaButton:active{
+    transform: scale(1.15);
+}
+button.mediaButton{
+    width: 64px !important;
+    height: 64px !important;
+    outline: none !important;
+    transition: transform 0.5s linear 0s;
+}
+div.topbar{
+    background-color: rgb(108, 108, 108);
+}
+div.mediaResource canvas#resource{
+    background-color:black;
+    width:100vw;
+    height: 91vh;
+}
+div.mediaResource div.middle{
+    position: absolute;
+    top: 48%;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+div.mediaResource div.sidebar{
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+}
+@media screen and (max-width: 390px){
+    section.group div.toolbox{
+        flex-flow: column nowrap !important;
+    }
+}
+@media screen and (min-width: 800px){
+    /*div.content div.body section.group div.chat-container div.cloud-item{
+        max-width: 54% !important;
+        font-size: 2.5em !important;    
+    }*/
+    div.content div.body section.group div.chat-container div.cloud-item.I{
+        align-self: flex-end;
+        margin-right: 21%;  
+    }
+    img.mime{
+        width: 84px !important;
+        height: 84px !important;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait){
+   div.content div.body header.head div.tag div.info a.title{
+    font-size: 1.35em !important;
+   }
+}
+@media (orientation: landscape) {
+    div.MediaResource div.container{     
+        flex-flow:row nowrap !important;  
+    }
+}
