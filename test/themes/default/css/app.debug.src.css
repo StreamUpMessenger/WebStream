@@ -580,16 +580,32 @@ div.topbar{
     justify-content: flex-start;
     align-items: center;
 }
-div.topbar .right label.title,.messagebox .sidebar label{
+div.topbar label.title,.messagebox .sidebar label{
     text-align: center;
 }
-div.topbar .right{
+div.topbar > .right_side{
     flex: 1 1 auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
     margin: 0px 0px 0px 10px;
+}
+div.topbar > .left_side{
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 10px 0px 0px;
+}
+div.topbar > .center_side{
+    flex: 3 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 0px 0px;
 }
 #save {
     margin: 5px auto;
@@ -603,4 +619,26 @@ div.content-chatbox{
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
+}
+div.topbar.crystal{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    z-index: 1000;
+    padding: inherit;
+    background-color: rgba(0, 0, 0, 0.69) !important;
+    opacity:0.25;
+    transition: opacity 0.5s ease-out 0.2s;
+}
+div.topbar.crystal:hover{
+    opacity: 1;
+}
+div.topbar.crystal label.title{
+    color:white;
+    font-weight: bold;
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
