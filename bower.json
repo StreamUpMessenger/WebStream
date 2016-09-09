@@ -1,0 +1,30 @@
+{
+  "name": "webstream",
+  "description": "cliente oficial streamup messenger",
+  "main": "main.js",
+  "authors": [
+    "Jhonny Mata",
+    "Isamar Romero",
+    "Xiu-Ling Rodriguez",
+    "Benjamin Escobar"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "StreamUp",
+    "cliente",
+    "messenger",
+    "chat",
+    "mensajeria"
+  ],
+  "homepage": "https://github.com/StreamUpMessenger/WebStream",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8"
+  }
+}

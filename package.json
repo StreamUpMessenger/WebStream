@@ -1,0 +1,43 @@
+{
+  "name": "webstream",
+  "version": "1.0.0",
+  "description": "cliente oficial streamup messenger",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compiler": "node node_modules/webpack/bin/webpack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StreamUpMessenger/WebStream.git"
+  },
+  "keywords": [
+    "StreamUp",
+    "cliente",
+    "messenger",
+    "chat",
+    "mensajeria"
+  ],
+  "author": "Jhonny Mata, Isamar Romero, Xiu-Ling Rodriguez, Benjamin Escobar",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/StreamUpMessenger/WebStream/issues"
+  },
+  "homepage": "https://github.com/StreamUpMessenger/WebStream#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bower": "^1.7.9",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.3",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "eslint": "^3.4.0",
+    "eslint-loader": "^1.5.0",
+    "json-loader": "^0.5.4"
+  }
+}
