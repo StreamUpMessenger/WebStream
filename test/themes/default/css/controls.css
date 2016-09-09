@@ -31,11 +31,11 @@ input[type="text"],textarea,input[type="password"],input[type="url"],input[type=
     transition:all 0.5s linear 0s;
     color: #5A5A5A;
 }
-.icons,div.profile div.capture{
+.icons,div.profile div.capture,div.content div.body.messenger .header > div.cover > div.placeholder:before{
     background-image:url("images/spriter-controls.png");
     background-repeat: no-repeat;    
 }
-.icons.x16{
+.icons.x16,div.content div.body.messenger .header > div.cover > div.placeholder:before{
     width: 38px !important;
     height: 38px !important;
 }
@@ -56,9 +56,8 @@ div.profile,div.mime{
     margin: 20px 5px;    
     overflow: hidden;    
     background-color: rgb(197, 197, 197);
-    position: relative;
-     
-    flex: 0 0 auto;  
+    position: relative;     
+    flex: 0 0 auto !important;  
 }
 div.profile{
     width: 84px !important;    
@@ -76,8 +75,8 @@ div.profile div.capture{
     background-color: rgba(111, 108, 108, 0.76);
     top: 27%;
     left: 27%;
-    height: 50%;
-    width: 50%;   
+    height: 28px;
+    width: 28px; 
     opacity: 0;
     transition: opacity 0.5s ease 0s;
     border-radius: 50%;          
@@ -1983,7 +1982,7 @@ div.profile.icons.shopping{
     background-position: -68px -6807px;
 }
 .icons.x48.user.white{
-    background-position: -2px -6862px;
+   background-position: -6px -6869px;
 }
 .icons.x48.user.black{
   background-position: -3px -6794px;
@@ -2063,7 +2062,7 @@ div.profile.icons.groups{
   background-position: -46px -7214px;
 }
 div.profile div.capture{
-   background-position: 8px -7344px;
+   background-position: 0px -7352px;
 }
 .icons.x24.capture.white{
     background-position: 16px -7333px;
@@ -2226,6 +2225,9 @@ div.profile div.capture{
 
 .icons.x16.edit.white{
    background-position: -169px -7687px;
+}
+div.content div.body.messenger .header > div.cover > div.placeholder:before{
+   background-position: -180px -7687px;
 }
 .icons.x24.edit.white{
    background-position: -164px -7681px;
