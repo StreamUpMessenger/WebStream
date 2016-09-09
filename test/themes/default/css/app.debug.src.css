@@ -1,12 +1,15 @@
 html{
-	overflow: hidden;
+	overflow: hidden !important;
 	background-color: #F2F2F2;
+    margin: 0px;
+    padding: 0px;
 }
 body{
 	color: #5A5A5A;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: 0px;
-	padding: 0px;	
+	padding: 0px;
+    overflow:hidden !important;
 }
 a{
 text-decoration: none;
@@ -17,6 +20,127 @@ font-weight: bold;
 a:hover{
     color: rgb(29, 89, 48);
 }
+div.bar{    
+    margin: 0px;
+    padding: 2px 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+div.bar.top, div.bar.bottom{
+    position: absolute;    
+}
+div.bar.top{
+    top:0%;
+    left:0%;
+}
+div.bar.bottom{
+    bottom:0%;
+    left:0%;
+}
+div.bar label.title,.messagebox .sidebar label{
+    text-align: center;
+}
+div.bar > .left_side,div.bar > .right_side,div.bar > .center_side{
+    overflow: hidden;
+}
+div.bar > .left_side,div.bar > .right_side{
+    flex: 1 1 20%;
+}
+div.bar > .right_side{    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 0px 0px 10px;
+}
+div.bar > .left_side{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 10px 0px 0px;
+}
+div.bar > .center_side{
+    flex: 3 1 60%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 0px 0px;
+}
+div.bar.crystal{    
+    width:100%;
+    z-index: 1000;
+    padding: inherit;
+    background-color: rgba(0, 0, 0, 0.69) !important;
+    /*opacity:0.25;    */
+}
+/*div.bar.crystal:hover,div.bar.crystal:active{
+    opacity: 1;
+}*/
+div.bar.crystal label.title{
+    color:white;
+    font-weight: bold;
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+*[data-transition="ease-out"],div.bar.crystal{
+    transition: opacity 0.45s ease-out 0.25s;
+}
+/*         Container Main Apps         */
+div.content{
+    display:flex;
+    overflow: hidden;   
+    flex-flow: row nowrap;
+    width: 175vw;
+    height: 100vh;
+    margin: 0px auto;
+    padding: 0px;
+}
+div.content div.body{    
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0%;
+    padding: 0%;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+div.content div.body section.page{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;   
+}
+
+/*      Menu Panel Config */
+div.content div.menu{
+    width: 75vw;
+    height: 100vh;
+    background: #FFF none repeat scroll 0% 0%;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+/*
+
+
 .toolbox,div.fieldset{
     border:none !important;
 }
@@ -38,54 +162,16 @@ div#contentload{
     justify-content:center;
     align-items:center;
 }
-div.content{
-	width: 100%;
-	margin: 0px auto;
-	padding: 0px;
-}
+
 div.content div.body section.content.data{
     text-align: center;
 }
 div.menu div.body,div.nav div.body{
     overflow:auto;
 }
-div.content{
-    display:flex;
-    overflow: hidden;   
-    flex-flow: row nowrap;
-    width: 175vw;
-    height: 100vh;  
-    margin:0%;
-    padding:0%;
-}
-div.content div.body{
-    position: relative;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0%;
-    padding: 0%;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-div.content div.body section.page{
-    position: relative;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    overflow: hidden;   
-}
-div.content div.menu{
-    width: 75vw;
-    height: 100vh;
-    background: #FFF none repeat scroll 0% 0%;
-    overflow-y: auto;
-}
+
+
+
 @media screen and (min-width: 320px) and (max-width: 800px){
    .content.column{
         display: flex;
@@ -123,7 +209,7 @@ span.center,label.center,small.center,p.center{
     display: block;
     text-align: center;
 }
-/* Menu principal de opciones...*/
+/* Menu principal de opciones...*\/
 div.menu ul{
     margin: 0px;
     padding: 0px;
@@ -572,41 +658,8 @@ text-align: center;
 .privacity{
     color: #8A9BA8;
 }
-div.topbar{    
-    margin: 0px;
-    padding: 2px 10px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-div.topbar label.title,.messagebox .sidebar label{
-    text-align: center;
-}
-div.topbar > .right_side{
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0px 0px 0px 10px;
-}
-div.topbar > .left_side{
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0px 10px 0px 0px;
-}
-div.topbar > .center_side{
-    flex: 3 0 auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 10px 0px 0px;
-}
+
+
 #save {
     margin: 5px auto;
     width: 100%;
@@ -620,25 +673,5 @@ div.content-chatbox{
     justify-content: flex-start;
     align-items: center;
 }
-div.topbar.crystal{
-    position: absolute;
-    top:0%;
-    left:0%;
-    width:100%;
-    z-index: 1000;
-    padding: inherit;
-    background-color: rgba(0, 0, 0, 0.69) !important;
-    opacity:0.25;
-    transition: opacity 0.5s ease-out 0.2s;
-}
-div.topbar.crystal:hover{
-    opacity: 1;
-}
-div.topbar.crystal label.title{
-    color:white;
-    font-weight: bold;
-    width:100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+
+*/
