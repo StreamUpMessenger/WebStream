@@ -74,8 +74,13 @@ div.bar.crystal{
     width:100%;
     z-index: 1000;
     padding: inherit;
-    background-color: rgba(0, 0, 0, 0.69) !important;
+    background-color: rgba(0, 0, 0, 0.69);  
     /*opacity:0.25;    */
+}
+div.bar.crystal.black{    
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.69), transparent);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.69), transparent);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.69), transparent);
 }
 /*div.bar.crystal:hover,div.bar.crystal:active{
     opacity: 1;

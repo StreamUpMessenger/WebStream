@@ -40,16 +40,22 @@ div.content div.body.messenger .header > div.cover > div.placeholder{
     font-weight: bold;    
 }
 div.content div.body.messenger .header > div.tag.bottom{
-    flex: 2 1 70%;
     overflow:hidden;
     text-align: left;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.69);
     z-index: 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
     justify-content: flex-start;
+}
+div.content div.body.messenger .header > div.tag.bottom.crystal.black{    
+    background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.38)) !important;
+    background: -moz-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.38)) !important;
+    background: -o-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.38)) !important;
+}
+div.content div.body.messenger .header > div.tag.bottom{
+    flex: 2 1 70%;
 }
 div.content div.body.messenger .header > div.tag > div.profile{
     align-self: center;
