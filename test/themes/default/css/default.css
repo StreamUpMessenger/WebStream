@@ -1,88 +1,119 @@
-body{
-    overflow:hidden !important;
-}
-div.content div.body section.page.middle{
-    justify-content: center !important;
-}
-div.content div.body header.head{
+/*          Header Messenger     */
+div.content div.body.messenger .header{
     position: relative;
-    padding-top: 30px;
+    overflow: hidden;
+    flex: 3 1 35%;
+    padding-top: 50px;
     background-color: #6D8BA8;
     margin: 0px;
-    color: #F6F6F6;
-    text-align: center;
-    overflow: hidden;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    flex: 1 1 30vh;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     justify-content: flex-end;
+    color: #F6F6F6;
 }
-div.content div.body header.head div.tag{    
+div.content div.body.messenger .header > div.cover{
+    position: relative;
+    opacity: 0;
+    overflow:hidden;
+    flex: 1 1 30%;
+    cursor: pointer;
+}
+div.content div.body.messenger .header > div.cover:hover,div.content div.body.messenger .header > div.cover:active,div.content div.body.messenger .header > div.cover:focus{
+    opacity: 1;
+}
+div.content div.body.messenger .header > div.cover > div.placeholder:before{
+    content:" ";
+    padding: 7px 10px;
+}
+div.content div.body.messenger .header > div.cover > div.placeholder{
+    overflow: hidden;
+    align-self: center;
+    position: absolute;
+    top: 0px;
+    right: 1%;
+    background-color: black;
+    padding: 5px;
+    border-radius: 0.35em;
+    font-weight: bold;    
+}
+div.content div.body.messenger .header > div.tag.bottom{
+    flex: 2 1 70%;
+    overflow:hidden;
     text-align: left;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.43);
-    width: 100%;
-    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.69);
     z-index: 0;
     display: flex;
     flex-flow: row nowrap;
-    margin: 15px 0px 0px;
+    align-items: stretch;
+    justify-content: flex-start;
 }
-div.content div.body header.head div.tag div.options{
-    flex: 3 1 40%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 8px;
-    flex-flow: row wrap;
-    margin: 3px 8px;
+div.content div.body.messenger .header > div.tag > div.profile{
+    align-self: center;
 }
-div.content div.body header.head div.tag:hover{
-    background-color: rgba(0, 0, 0, 0.69);
-}
-/*Tags Align*/
-div.content div.body header.head div.tag.bottom{
-    bottom:0%;
-}
-div.content div.body header.head div.tag.top{
-    top:0%;
-}
-div.content div.body header.head div.tag div.info{
-    margin: 5px;
-    flex: 2 1 40%;
+div.content div.body.messenger .header > div.tag > div.info{
     overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
 }
-div.content div.body header.head div.tag div.info a.title{
+div.content div.body.messenger .header > div.tag > div.info > div.description{
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.75em;
+    color: #D7D7D7;
+    font-weight: bold;
+    line-height: 1.35em;
+}
+div.content div.body.messenger .header > div.tag > div.info > div.description[contenteditable]{
+    min-height: 1.35em;
+    padding: 2px 5px;
+    cursor:pointer;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+}
+div.content div.body.messenger .header > div.tag > div.info > div.description[contenteditable]:focus,div.content div.body.messenger .header > div.tag > div.info > div.description[contenteditable]:hover{
+    outline: none;
+    background-color: #5c5c5c;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.5) inset;
+    border: none;
+}
+div.content div.body.messenger .header > div.tag > div.info > a.title{
     text-align: left;
     color: rgb(233, 233, 233);
-    font-size: 1.75em;
+    font-size: 1.45em;
     text-shadow: 1px 1px 1px rgba(158, 157, 157, 0.3);
     line-height: 2.35em;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
-div.content div.body header.head div.tag div.info div.description[contenteditable]{
-    min-height: 1.35em;
-    cursor:pointer;
-}
-div.content div.body header.head div.tag div.info div.description[contenteditable]:focus{
-    min-height: 1.35em;
-    cursor:pointer;
-    overflow: auto !important;
-}
-div.content div.body header.head div.tag div.info div.description{
-    text-overflow: ellipsis;
-    white-space: nowrap;
+/*      Content Messenger       */
+.header ~ *, div.content div.body.messenger .content{
+    flex: 1 1 55%;
     overflow: hidden;
+}
+/*
+div.content div.body section.page.middle{
+    justify-content: center !important;
+}
+
+
+/*Tags Align*\/
+
+
+
+
+div.content div.body header.head div.tag div.info div.description{
+    
     width: 91%;
-    font-size: 0.75em;
-    color: #B9B9B9;
-    font-weight: bold;
-    line-height: 1.35em;    
+        
 }
 div.content div.body header.head div.tag div.profile:not(.icon){
    margin: 0px;
@@ -156,7 +187,7 @@ div.cloud-item.selected{
     border: 1px solid #F0CB80;
 }
 div.content div.body section.group div.chat-container div.cloud-item{
-   /* flex: 0 0 auto;*/
+   /* flex: 0 0 auto;*\/
     max-width: 250px;    
     border-radius: 0.35em;
     padding: 5px 20px;
@@ -458,7 +489,7 @@ div.mediaResource div.sidebar{
     /*div.content div.body section.group div.chat-container div.cloud-item{
         max-width: 54% !important;
         font-size: 2.5em !important;    
-    }*/
+    }*\/
     div.content div.body section.group div.chat-container div.cloud-item.I{
         align-self: flex-end;
         margin-right: 21%;  
