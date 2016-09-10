@@ -1,25 +1,12 @@
 /*          Header Messenger     */
-div.content div.body.messenger .header{
-    position: relative;
-    overflow: hidden;
-    flex: 3 1 35%;
-    padding-top: 50px;
-    background-color: #6D8BA8;
-    margin: 0px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    justify-content: flex-end;
+div.content div.body.messenger .header{    
     color: #F6F6F6;
 }
+div.content div.body.messenger .header{
+    background-color: #6D8BA8;
+}
 div.content div.body.messenger .header > div.cover{
-    position: relative;
     opacity: 0;
-    overflow:hidden;
-    flex: 1 1 30%;
-    cursor: pointer;
 }
 div.content div.body.messenger .header > div.cover:hover,div.content div.body.messenger .header > div.cover:active,div.content div.body.messenger .header > div.cover:focus{
     opacity: 1;
@@ -28,61 +15,16 @@ div.content div.body.messenger .header > div.cover > div.placeholder:before{
     content:" ";
     padding: 7px 10px;
 }
-div.content div.body.messenger .header > div.cover > div.placeholder{
-    overflow: hidden;
-    align-self: center;
-    position: absolute;
-    top: 0px;
-    right: 1%;
-    background-color: black;
-    padding: 5px;
-    border-radius: 0.35em;
-    font-weight: bold;    
-}
-div.content div.body.messenger .header > div.tag.bottom{
-    overflow:hidden;
-    text-align: left;
-    position: relative;
-    z-index: 0;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
-    justify-content: flex-start;
+div.content div.body.messenger .header > div.cover > div.placeholder{    
+    background-color: black;    
 }
 div.content div.body.messenger .header > div.tag.bottom.crystal.black{    
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.38),rgb(0, 0, 0) ) !important;
     background: -moz-linear-gradient(rgba(0, 0, 0, 0.38),rgb(0, 0, 0) ) !important;
     background: -o-linear-gradient(rgba(0, 0, 0, 0.38),rgb(0, 0, 0) ) !important;
 }
-div.content div.body.messenger .header > div.tag.bottom{
-    flex: 2 1 70%;
-}
-div.content div.body.messenger .header > div.tag > div.profile{
-    align-self: center;
-}
-div.content div.body.messenger .header > div.tag > div.info{
-    overflow: hidden;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: stretch;
-}
-div.content div.body.messenger .header > div.tag > div.info > div.description{
-    margin-bottom: 5px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 0.75em;
+div.content div.body.messenger .header > div.tag > div.info > div.description{   
     color: #D7D7D7;
-    font-weight: bold;
-    line-height: 1.35em;
-}
-div.content div.body.messenger .header > div.tag > div.info > div.description[contenteditable]{
-    min-height: 1.35em;
-    padding: 2px 5px;
-    cursor:pointer;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
 }
 div.content div.body.messenger .header > div.tag > div.info > div.description[contenteditable]:focus,div.content div.body.messenger .header > div.tag > div.info > div.description[contenteditable]:hover{
     outline: none;
@@ -91,19 +33,15 @@ div.content div.body.messenger .header > div.tag > div.info > div.description[co
     border: none;
 }
 div.content div.body.messenger .header > div.tag > div.info > a.title{
-    text-align: left;
     color: rgb(233, 233, 233);
-    font-size: 1.45em;
-    text-shadow: 1px 1px 1px rgba(158, 157, 157, 0.3);
-    line-height: 2.35em;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 /*      Content Messenger       */
-.header ~ *, div.content div.body.messenger .content{
-    flex: 1 1 55%;
-    overflow: hidden;
+div.content div.body.messenger .content{
+    background-color: #90e9f3;
+    background-image: url('images/background-pointer.png');
+    background: url('images/background-pointer.png'), -webkit-linear-gradient(#bb7dd1,#90e9f3);
+    background: url('images/background-pointer.png'), -moz-linear-gradient(#bb7dd1,#90e9f3);
+    background: url('images/background-pointer.png'), -o-linear-gradient(#bb7dd1,#90e9f3);
 }
 /*
 div.content div.body section.page.middle{
